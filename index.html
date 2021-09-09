@@ -1,46 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/stop1.png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  
-  <title>  Shopper shop</title>
-
+   <meta charset="UTF-8">
+   <!-- css conection -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- java script connection -->
+   <script src="js/script.js" defer></script>
+   <meta http-equiv="Content-type" Content="text/html;charset=UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- FontAwsome-un qoşulma linki -->
+   <script src="https://kit.fontawesome.com/f3ac8151f3.js" crossorigin="anonymous"></script>
+   <!-- Əgər frontendmentor projectləri ilə işləsəm İconu işə salmalıyam -->
+   <link rel="icon" type="image/png" href="img/dicount.jpg">
+   <title>Tip calculator</title>
 </head>
+
 <body>
-
-  <section id="main-cont">
-    <header>
-      <img src="images/sss.jpg">
-    </header>
-
-    <img id="mobile" src="images/hero-mobile.jpg" alt="img">
-
-    <main>
-      <h3 id="title"><b><span><small>WE'RE</b></span> comming soon with our new shop</small></h3>
-
-      <p><b>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-
-      <div id="input-email">
-        <input type="email" id="email" autocomplete="email" placeholder="Email Address" spellcheck="false">
-        <img id="error" src="images/icon-error.svg" alt="icon">
-        <button id="buttonValidation">
-          <img src="images/icon-arrow.svg"  alt="icon">
-        </button>
+   <div class="wrapper">
+      <div class="content">
+         <div class="content__header">Discount<br>calculator</div>
+         <div class="content__body">
+            <div class="content__bill bill">
+               <div class="bill__amount">
+                  <p>Bill Amount</p>
+                  <div class="input-area">
+                     <i class="fas fa-rupee-sign"></i>
+                     <span class="bill-error error"></span>
+                     <input id="bill" placeholder="0" type="text">
+                  </div>
+               </div>
+               <div class="bill__percentage">
+                  <p>Discount %</p>
+                  <div class="bill__percentage--container">
+                     <button class="bill__percentages">5%</button>
+                     <button class="bill__percentages">10%</button>
+                     <button class="bill__percentages">15%</button>
+                     <button class="bill__percentages">25%</button>
+                     <button class="bill__percentages">50%</button>
+                     <input id="custom" type="text" placeholder="Custom" class="bill__custom-percentage">
+                  </div>
+               </div>
+               <div class="bill__number-people">
+                  <p></p>
+                  <div class="input-area">
+                     <i class="fas fa-user"></i>
+                     <span class="num-error error"></span>
+                     <input id="plpNum" placeholder="0" type="text">
+                  </div>
+               </div>
+            </div>
+            <div class="content__price">
+               <div class="content__tip">
+                  <div class="content__tip--text">
+                     <p>Dicount Amount </p>
+                     <span>/ person</span>
+                  </div>
+                  <p class="tip--amount amount">₹0.00</p>
+               </div>
+               <div class="content__total">
+                  <div class="content__total--text">
+                     <p>Total</p>
+                     <span>/ person</span>
+                  </div>
+                  <p class="total--amount amount">₹0.00</p>
+               </div>
+               <button class="reset">reset</button>
+            </div>
+         </div>
       </div>
-      <span id="warning">Please provide a valid email</span>
-    </main>
-  </section>
-  
-  <section id="desktop">
-    <img src="images/shoper shop.jpg" alt="img">
-  </section>
-
-  <script src="script.js"></script>
+   </div>
 </body>
+
 </html>
